@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recreating .ready()</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		.responsive {
+			width: 50%;
+			height: 50%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Cat Clicker !</h1>
+	
+	<div class="completion">Velmurugan !</div>
+	<img id="my-cat-1" class="responsive" src="cat.jpg" height="2448" width="3264" alt="SF Market Street">
+	<p>Count is <span id="count">0</span></p>
+	<script>
+		    var count=0;
+		    var elem = document.getElementById('my-cat-1');
+			elem.addEventListener('click', function(){
+			  //the element has been clicked... do stuff here
+			  count++;
+			  console.log('Cat is clicked !');
+			  var countElem = document.getElementById('count');
+			  countElem.firstChild.nodeValue = count;
+
+			}, false);
+	</script>
+</body>
+</html>
